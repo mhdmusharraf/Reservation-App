@@ -52,12 +52,10 @@ export const getHotels = async (req, res, next) => {
 
     const limitNumber = limit ? parseInt(limit, 10) : 10; // Default limit to 10
 
-    console.log("MongoDB Query:", query);
-    console.log("Limit:", limitNumber);
+    
 
     const hotels = await Hotel.find(query).limit(limitNumber);
 
-    console.log("Hotels found:", hotels);
     res.status(200).json(hotels);
   } catch (err) {
     console.error("Error fetching hotels:", err);
