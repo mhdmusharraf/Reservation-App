@@ -5,6 +5,7 @@ import {verifyAdmin} from "../utils/verifyToken.js";
 
 const router = express.Router();
 
+console.log("test");
 // CREATE
 router.post("/",verifyAdmin,createHotel);
 // UPDATE
